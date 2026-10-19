@@ -1,0 +1,31 @@
+
+# Windows shortcuts
+*.lnk
+
+# Java compiled files and build folders
+*.class
+target/
+build/
+
+# Eclipse workspace files
+.metadata/
+.settings/
+.classpath
+.project
+
+# VS Code settings
+.vscode/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Local database credentials
+DBUtil.java
+DBConnection.java
+
+# SQL files containing local credentials or data
+*.sql
+
+# Downloaded database connector
+*.jar

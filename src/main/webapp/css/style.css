@@ -1,0 +1,633 @@
+
+/* =========================================================
+   CAMPUSCONNECT | PREMIUM DESIGN SYSTEM
+   Clean • Modern • Structured • Responsive
+   ========================================================= */
+
+:root {
+    --navy: #172554;
+    --navy-deep: #101b3b;
+    --blue: #405de6;
+    --blue-hover: #3048c7;
+    --blue-soft: #edf1ff;
+    --purple: #7667e8;
+    --page: #f6f7fb;
+    --white: #ffffff;
+    --ink: #1c2541;
+    --muted: #778198;
+    --line: #e6e9f1;
+    --green: #16845b;
+    --red: #c93f50;
+    --radius: 18px;
+    --shadow: 0 8px 30px rgba(26, 39, 78, 0.06);
+    --shadow-hover: 0 16px 38px rgba(26, 39, 78, 0.11);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--page);
+    color: var(--ink);
+    font-family: "Segoe UI", Inter, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: color .2s ease, background .2s ease;
+}
+
+a:hover {
+    color: var(--blue-hover);
+}
+
+h1, h2, h3, h4 {
+    color: var(--navy);
+    line-height: 1.3;
+    font-weight: 750;
+    letter-spacing: -0.45px;
+}
+
+h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 0 0 18px;
+}
+
+h2 {
+    font-size: clamp(21px, 3vw, 27px);
+    margin: 0 0 18px;
+}
+
+h3 {
+    font-size: 19px;
+    margin: 0 0 12px;
+}
+
+p {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 17px clamp(20px, 5vw, 72px);
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 3px 15px rgba(26, 39, 78, .035);
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 14px;
+    border-radius: 9px;
+    color: #59647c;
+    font-size: 14px;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: var(--blue-soft);
+    color: var(--blue);
+}
+
+nav a:first-child {
+    margin-right: auto;
+    color: var(--navy);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* ================= MAIN PAGE LAYOUT ================= */
+
+main,
+.container,
+.page-container {
+    width: min(1180px, 91%);
+    margin: 38px auto;
+}
+
+section {
+    margin-bottom: 34px;
+}
+
+/* Give direct page content consistent spacing.
+   Avoid forcing layout on every nested element. */
+
+body > h1,
+body > h2,
+body > h3,
+body > p {
+    margin-left: 4.5%;
+    margin-right: 4.5%;
+}
+
+/* ================= DASHBOARD HERO ================= */
+
+.welcome,
+.welcome-section,
+.hero,
+.dashboard-hero {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(30px, 5vw, 58px);
+    margin: 24px 0 36px;
+    border: 0;
+    border-radius: 24px;
+    background: linear-gradient(125deg, #172554 0%, #304ac5 58%, #7667e8 100%);
+    box-shadow: 0 16px 38px rgba(48, 74, 197, .16);
+    color: var(--white);
+}
+
+.welcome h1,
+.welcome h2,
+.welcome h3,
+.welcome p,
+.welcome-section h1,
+.welcome-section h2,
+.welcome-section p,
+.hero h1,
+.hero h2,
+.hero p,
+.dashboard-hero h1,
+.dashboard-hero h2,
+.dashboard-hero p {
+    color: var(--white);
+}
+
+.welcome h1,
+.hero h1,
+.dashboard-hero h1 {
+    font-size: clamp(30px, 4vw, 43px);
+    letter-spacing: -1px;
+}
+
+.welcome p,
+.welcome-section p,
+.hero p,
+.dashboard-hero p {
+    font-size: 16px;
+    opacity: .91;
+}
+
+.welcome a,
+.welcome-section a,
+.hero a,
+.dashboard-hero a {
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* ================= CARDS ================= */
+
+.card,
+.event-card,
+.dashboard-card,
+.profile-card,
+.form-card,
+.event-details,
+.event-detail-card {
+    padding: 25px;
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--shadow);
+    transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.card:hover,
+.event-card:hover,
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.event-card h2,
+.event-card h3,
+.card h2,
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.event-card p,
+.card p {
+    color: var(--muted);
+}
+
+/* ================= EVENT LISTS ================= */
+
+.event-meta,
+.event-info,
+.event-details-grid {
+    color: var(--muted);
+    margin: 14px 0;
+}
+
+.event-meta p,
+.event-info p {
+    margin: 7px 0;
+}
+
+.badge,
+.tag,
+.category-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 100px;
+    background: var(--blue-soft);
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: .2px;
+}
+
+/* ================= BUTTONS ================= */
+
+button,
+.btn,
+.button,
+input[type="submit"],
+input[type="button"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 11px 20px;
+    border: 1px solid var(--blue);
+    border-radius: 10px;
+    background: var(--blue);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 750;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .2s ease, box-shadow .2s ease,
+                transform .2s ease;
+}
+
+button:hover,
+.btn:hover,
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    border-color: var(--blue-hover);
+    background: var(--blue-hover);
+    color: var(--white);
+    box-shadow: 0 5px 14px rgba(64, 93, 230, .18);
+    transform: translateY(-1px);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(64, 93, 230, .25);
+    outline-offset: 3px;
+}
+
+button:disabled,
+input:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+/* ================= FORMS ================= */
+
+form {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="hidden"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    margin: 0 0 19px;
+    border: 1px solid #dce2ee;
+    border-radius: 11px;
+    background: var(--white);
+    color: var(--ink);
+    font: inherit;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a1a9ba;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--blue);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(64, 93, 230, .09);
+}
+
+input[readonly] {
+    background: #f0f3f9 !important;
+    color: var(--muted) !important;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--blue);
+}
+
+/* ================= LOGIN / REGISTER ================= */
+
+.auth-container,
+.login-container,
+.register-container {
+    width: min(470px, 92%);
+    padding: clamp(27px, 5vw, 42px);
+    margin: 48px auto;
+    border: 1px solid rgba(230, 233, 241, .9);
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: 0 20px 60px rgba(26, 39, 78, .09);
+}
+
+.auth-container h1,
+.login-container h1,
+.register-container h1 {
+    text-align: center;
+}
+
+.auth-container button,
+.login-container button,
+.register-container button,
+.auth-container input[type="submit"],
+.login-container input[type="submit"],
+.register-container input[type="submit"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* ================= FILTERS / SEARCH ================= */
+
+.filters,
+.filter-form,
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 15px;
+    padding: 22px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.filters > div,
+.filter-form > div,
+.search-form > div {
+    flex: 1 1 175px;
+    min-width: 0;
+}
+
+.filters button,
+.filter-form button,
+.search-form button {
+    margin-bottom: 19px;
+}
+
+/* ================= ACTION GROUPS ================= */
+
+.actions,
+.action-buttons,
+.button-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+    margin-top: 20px;
+}
+
+.actions form,
+.action-buttons form,
+.button-group form {
+    margin: 0;
+}
+
+.actions a,
+.action-buttons a,
+.button-group a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 9px 16px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.actions a:hover,
+.action-buttons a:hover,
+.button-group a:hover {
+    background: var(--blue-soft);
+}
+
+/* ================= ALERTS ================= */
+
+.success,
+.success-message {
+    padding: 13px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #c1ead5;
+    border-radius: 11px;
+    background: #effbf4;
+    color: #116b49;
+}
+
+.error,
+.error-message {
+    padding: 13px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #f0c7ce;
+    border-radius: 11px;
+    background: #fff2f3;
+    color: #a52838;
+}
+
+/* ================= TABLES ================= */
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--white);
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+}
+
+th {
+    background: #eef2ff;
+    color: var(--navy);
+    font-weight: 750;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+/* ================= EMPTY STATES ================= */
+
+.empty-state,
+.no-events {
+    padding: 35px 22px;
+    border: 1px dashed #cdd5e6;
+    border-radius: var(--radius);
+    background: var(--white);
+    color: var(--muted);
+    text-align: center;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 26px 5%;
+    margin-top: 50px;
+    border-top: 1px solid var(--line);
+    background: var(--white);
+    color: var(--muted);
+    text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    nav {
+        gap: 6px;
+        padding: 13px 4%;
+    }
+
+    nav a {
+        padding: 8px 10px;
+    }
+
+    nav a:first-child {
+        width: 100%;
+        margin: 0 0 4px;
+    }
+
+    main,
+    .container,
+    .page-container {
+        width: 92%;
+        margin: 24px auto;
+    }
+
+    .card,
+    .event-card,
+    .dashboard-card,
+    .profile-card,
+    .form-card,
+    .event-details,
+    .event-detail-card {
+        padding: 19px;
+    }
+
+    .filters,
+    .filter-form,
+    .search-form {
+        display: block;
+        padding: 17px;
+    }
+
+    .filters button,
+    .filter-form button,
+    .search-form button {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .welcome,
+    .welcome-section,
+    .hero,
+    .dashboard-hero {
+        padding: 27px 22px;
+        border-radius: 17px;
+    }
+
+    .auth-container,
+    .login-container,
+    .register-container {
+        margin: 24px auto;
+    }
+
+    .actions,
+    .action-buttons,
+    .button-group {
+        align-items: stretch;
+    }
+
+    .actions a,
+    .action-buttons a,
+    .button-group a {
+        text-align: center;
+    }
+}
